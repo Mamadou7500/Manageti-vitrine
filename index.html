@@ -2,223 +2,52 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Manageti</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--
-
-TemplateMo 570 Chain App Dev
-
-https://templatemo.com/tm-570-chain-app-dev
-
--->
-
-    <!-- Additional CSS Files -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/animated.css" />
-    <link rel="stylesheet" href="assets/css/owl.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="assets/css/index.css" />
   </head>
-
   <body>
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/images/logo2.svg" alt="Logo" />
         </div>
-      </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-    <!-- ***** Header Area Start ***** -->
-    <header
-      class="header-area header-sticky wow slideInDown"
-      data-wow-duration="0.75s"
-      data-wow-delay="0s"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <!-- ***** Logo Start ***** -->
-              <a href="index.html" class="logo">
-                <img src="assets/images/logo2.svg" alt="logo entreprise" />
-              </a>
-              <!-- ***** Logo End ***** -->
-              <!-- ***** Menu Start ***** -->
-              <ul class="nav">
-                <li class="scroll-to-section">
-                  <a href="#top" class="active">Accueil</a>
-                </li>
-                <li class="scroll-to-section">
-                  <a>Nos fonctionnalités ▼</a>
-                  <ul class="submenu">
-                    <li><a href="#">Logiciel de prospection</a></li>
-                    <li><a href="propos.html">Relation & gestion client</a></li>
-                    <li><a href="#">Interface espace client</a></li>
-
-                    <li><a href="#">Gestion des Documents eléctronique</a></li>
-                    <li>
-                      <a href="prospection.html">Gestions des interventions</a>
-                    </li>
-                    <!-- <li><a href="#">Gestion des Documents eléctronique</a></li> -->
-                  </ul>
-                </li>
-                <li class="scroll-to-section">
-                  <a href="contact.html">Contact</a>
-                </li>
-                <li class="scroll-to-section">
-                  <a href="abonnement.html">Abonnement</a>
-                </li>
-                <li class="scroll-to-section">
-                  <a href="#newsletter">Connexion</a>
-                </li>
-                <li>
-                  <div class="gradient-button">
-                    <a id="modal_trigger" href="#modal"
-                      ><i class="fa fa-sign-in-alt"></i> S’inscrire</a
-                    >
-                  </div>
-                </li>
-              </ul>
-              <a class="menu-trigger">
-                <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
-            </nav>
-          </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Nos Solutions<img src="assets/images/fleche.svg" alt="Flèche" />
+            </a>
+            <div class="dropdown-content">
+              <a href="prospection.html">Prospection optimisée</a>
+              <a href="propos.html">Relation & gestion client</a>
+              <a href="module.html">Espace dédié client</a>
+              <a href="ged.html">Gestion Électronique des Documents</a>
+              <a href="gestion.html">Gestion des interventions</a>
+            </div>
+          </li>
+          <li><a href="abonnement.html">Abonnement</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Webinaire
+              <!-- Webinaire<img src="assets/images/fleche.svg" alt="Flèche" /> -->
+            </a>
+            <div class="dropdown-content">
+              <!-- <a href="#">Webinaire 1</a>
+              <a href="#">Webinaire 2</a>
+              <a href="#">Webinaire 3</a> -->
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <a href="essai.html" class="btn-essai">Essai gratuit</a>
+          <a href="connexion.html" class="btn-espace-client">Espace client</a>
         </div>
-      </div>
+      </nav>
     </header>
-    <!-- ***** Header Area End ***** -->
 
-    <div id="modal" class="popupContainer" style="display: none">
-      <div class="popupHeader">
-        <span class="header_title">Login</span>
-        <span class="modal_close"><i class="fa fa-times"></i></span>
-      </div>
-
-      <section class="popupBody">
-        <!-- Social Login -->
-        <div class="social_login">
-          <div class="">
-            <a href="#" class="social_box fb">
-              <span class="icon"><i class="fab fa-facebook"></i></span>
-              <span class="icon_title">Connect with Facebook</span>
-            </a>
-
-            <a href="#" class="social_box google">
-              <span class="icon"><i class="fab fa-google-plus"></i></span>
-              <span class="icon_title">Connect with Google</span>
-            </a>
-          </div>
-
-          <div class="centeredText">
-            <span>Or use your Email address</span>
-          </div>
-
-          <div class="action_btns">
-            <div class="one_half">
-              <a href="#" id="login_form" class="btn">Login</a>
-            </div>
-            <div class="one_half last">
-              <a href="#" id="register_form" class="btn">Sign up</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Username & Password Login form -->
-        <div class="user_login">
-          <form>
-            <label>Email / Username</label>
-            <input type="text" />
-            <br />
-
-            <label>Password</label>
-            <input type="password" />
-            <br />
-
-            <div class="checkbox">
-              <input id="remember" type="checkbox" />
-              <label for="remember">Remember me on this computer</label>
-            </div>
-
-            <div class="action_btns">
-              <div class="one_half">
-                <a href="#" class="btn back_btn"
-                  ><i class="fa fa-angle-double-left"></i> Back</a
-                >
-              </div>
-              <div class="one_half last">
-                <a href="#" class="btn btn_red">Login</a>
-              </div>
-            </div>
-          </form>
-
-          <a href="#" class="forgot_password">Forgot password?</a>
-        </div>
-
-        <!-- Register Form -->
-        <div class="user_register">
-          <form>
-            <label>Full Name</label>
-            <input type="text" />
-            <br />
-
-            <label>Email Address</label>
-            <input type="email" />
-            <br />
-
-            <label>Password</label>
-            <input type="password" />
-            <br />
-
-            <div class="checkbox">
-              <input id="send_updates" type="checkbox" />
-              <label for="send_updates">Send me occasional email updates</label>
-            </div>
-
-            <div class="action_btns">
-              <div class="one_half">
-                <a href="#" class="btn back_btn"
-                  ><i class="fa fa-angle-double-left"></i> Back</a
-                >
-              </div>
-              <div class="one_half last">
-                <a href="#" class="btn btn_red">Register</a>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-    </div>
-
-    <div
+    <!-- <div
       class="main-banner wow fadeIn"
       id="top"
       data-wow-duration="1s"
@@ -236,7 +65,10 @@ https://templatemo.com/tm-570-chain-app-dev
                 >
                   <div class="row">
                     <div class="col-lg-12">
-                      <h2>Manageti, votre entreprise unifiée</h2>
+                      <h2>
+                        Manageti, votre<br />
+                        entreprise unifiée
+                      </h2>
                       <p>
                         Renforcez vos relations client, simplifiez vos processus
                         et stimulez la croissance de votre entreprise avec
@@ -269,105 +101,34 @@ https://templatemo.com/tm-570-chain-app-dev
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <!-- <div id="services" class="services section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div
-              class="section-heading wow fadeInDown"
-              data-wow-duration="1s"
-              data-wow-delay="0.5s"
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Manageti, votre <br />entreprise unifiée</h1>
+          <p>
+            Renforcez vos relations clients, simplifiez vos processus et
+            stimulez la croissance de votre entreprise avec Manageti, une
+            plateforme puissante et polyvalente conçue pour répondre à tous vos
+            besoins en matière de gestion d’entreprise.
+          </p>
+          <div class="cta">
+            <a class="btn-decouvrez" href="essai.html">DÉCOUVREZ</a>
+            <span
+              >Essayez la version
+              <strong>gratuite pendant 14 jours</strong></span
             >
-              <h4>Automatisez vos prospects & opportunités</h4>
-        
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullamcorper suscipit Lorem ipsum dolor sit
-                amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet
-               
-              </p>
-            </div>
-            <img src="assets/images/Crm.png" alt="" class="section-images" />
           </div>
         </div>
-      </div> -->
-
-    <!-- <div class="section2">
-        <h2>Nos fonctionnalités</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy<br> nibh euismod tincidunt ut laoreet dolore magna </p>
-    
-        <div class="icons">
-          <div class="icon">
-            <img src="assets/images/icone1.svg" alt="Icône 1">
-            <p>Gestion & création<br>
-              d’opportunité</p>
-          </div>
-          <div class="icon">
-            <img src="assets/images/icone2.svg" alt="Icône 2">
-            <p>Gestion & création fichier <br> prospect</p>
-          </div>
-          <div class="icon">
-            <img src="assets/images/icone3.svg" alt="Icône 3">
-            <p>Automatisme & <br>transformation<br>
-              prospect & client</p>
-          </div>
-          <div class="icon">
-            <img src="assets/images/icone4.svg" alt="Icône 4">
-            <p>Créez & gérez<br> 
-              vos équipes</p>
-          </div>
-          <div class="icon">
-            <img src="assets/images/icone5.svg" alt="Icône 5">
-            <p>Suivez & analisez vos<br> objectifs & activités</p>
-          </div>
-          <div class="icon">
-            <img src="assets/images/icone6.svg" alt="Icône 6">
-            <p>Suivez & planifiez<br>
-              vos RDV</p>
-          </div>
+        <div class="hero-image">
+          <img src="assets/images/fusée illustration 1.png" alt="fusée" />
         </div>
-      </div> -->
-    <!-- <div class="image-section">
-        <img src="assets/images/Crm2.png" alt="Image de la page principal du logiciel CRM">
-      </div> -->
-
-    <!-- <section class="vignettes_section">
-        <h1>Solutions pour tous</h1>
-      
-        <div class="vignette">
-          <img src="assets/images/vignette1.png" alt="Image 1">
-          <h3>CRM</h3>
-          <p>Lorem ipsum dolor sit amet,<br> consectetuer adipiscing elit, sed <br> diam nonummy nibh euismod</p>
-          <hr>
-          <a href="prospection.html"><p>Découvrez</p></a>
-        </div>
-      
-        <div class="vignette">
-          <img src="assets/images/vignette2.png" alt="Image 2">
-          <h3>Client & Chantier</h3>
-          <p>Lorem ipsum dolor sit amet,<br> consectetuer adipiscing elit, sed <br> diam nonummy nibh euismod</p>
-          <hr>
-          <a href="prospection.html"><p>Découvrez</p></a>
-          
-        </div>
-      
-        <div class="vignette">
-          <img src="assets/images/vignette3.png" alt="Image 3">
-          <h3>Outil Collaboratif</h3>
-          <p>Lorem ipsum dolor sit amet,<br> consectetuer adipiscing elit, sed <br> diam nonummy nibh euismod</p>
-          <hr>
-          <a href="prospection.html"><p>Découvrez</p></a>
-        </div>
-
-      </section> -->
+      </section>
+    </main>
 
     <!-- Carousel -->
-    <div class="carousel-container">
+    <!-- <div class="carousel-container">
       <h2>Solutions pour tous</h2>
       <div class="carousel-wrapper">
         <button class="arrow-left" id="prev-btn">&#9664;</button>
@@ -438,135 +199,138 @@ https://templatemo.com/tm-570-chain-app-dev
         <button class="nav-button" data-card="3"></button>
         <button class="nav-button" data-card="4"></button>
       </div>
-    </div>
+    </div> -->
     <!-- Fin carousel -->
 
-    <!-- <section class="layout-section">
-      <h1>
-        Ce que nous proposons <br />
-        en plus avec Manageti
-      </h1>
+    <!-- Caroussel test -->
 
-      <div class="content-container">
-        <div class="text-container">
-          <h2>Entre ERP <br />& CRM</h2>
-          <p class="mini-text">
-            Découvrez CRM Manageti : simplifiez vos processus, stimulez la
-            <br />
-            croissance. Compatible avec Windows, macOS et Linux, une gestion<br />
-            fluide sur tous les appareils. Gérez clients et données avec
-            simplicité.<br />
-            Transformez votre bureau en hub de productivité dès aujourd'hui.
+    <div class="curve">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,128L48,117.3C96,107,192,85,288,85.3C384,85,480,107,576,133.3C672,160,768,192,864,202.7C960,213,1056,203,1152,181.3C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
+      <h1>Solutions pour tous</h1>
+      <div class="slider">
+        <div class="item">
+          <img src="assets/images/ged.png" alt="GED" />
+          <h2>GED</h2>
+          <p>
+            Simplifiez, centralisez et optimisez la gestion de vos documents
+            avec notre solution avancée de la Gestion Électronique de Documents.
           </p>
+          <hr />
+          <a href="ged.html">DÉCOUVREZ</a>
         </div>
-        <img src="assets/images/soon.png" alt="Image de test" />
-      </div>
-    </section>
-
-    <section class="layout-section2">
-      <div class="content-container2">
-        <img src="assets/images/soon.png" alt="Image de test" />
-
-        <div class="text-container2">
-          <h2>
-            Prospects, clients,<br />
-            chantiers en un clic
-          </h2>
-          <p class="mini-text">
-            Découvrez CRM Manageti : simplifiez vos processus, stimulez la
-            <br />
-            croissance. Compatible avec Windows, macOS et Linux, une gestion<br />
-            fluide sur tous les appareils. Gérez clients et données avec
-            simplicité.<br />
-            Transformez votre bureau en hub de productivité dès aujourd'hui.
+        <div class="item">
+          <img
+            src="assets/images/interventions.png"
+            alt="Gestion des interventions"
+          />
+          <h2>Gestion des interventions</h2>
+          <p>
+            Simplifiez la gestion de vos interventions : planifiez, assignez des
+            tâches et suivez les progrès en temps réel. Améliorez la
+            communication et augmentez la satisfaction client.
           </p>
+          <hr />
+          <a href="gestion.html">DÉCOUVREZ</a>
         </div>
-      </div>
-    </section>
-
-    <section class="layout-section">
-      <div class="content-container">
-        <div class="text-container">
-          <h2>L’essentiel pour vos <br />équipe tout en 1</h2>
-          <p class="mini-text">
-            Manageti simplifie la gestion des équipes en centralisant les <br />
-            activités, les prospects et les plannings sur une plateforme <br />
-            conviviale. Analysez vos performances, partagez des informations
-            <br />
-            clés et gérez vos équipes de manière efficace, tout en libérant
-            votre <br />
-            équipe des tâches administratives.Optez pour Manageti pour une
-            <br />productivité accrue et une collaboration fluide.
+        <div class="item active">
+          <img src="assets/images/target.png" alt="Prospection optimisée" />
+          <h2>Prospection optimisée</h2>
+          <p>
+            L'outil ultime de prospection, de qualification et de prise de
+            rendez-vous conçu spécialement pour vous !<br />
+            Organisez vos tournées commerciales de manière efficace.
           </p>
+          <hr />
+          <a href="prospection.html">DÉCOUVREZ</a>
         </div>
-        <img src="assets/images/soon.png" alt="Image de test" />
-      </div>
-    </section>
-
-    <section class="feature-section">
-      <div class="feature-container">
-        <div class="feature-text">
-          <h2>
-            Personnalisez votre<br />
-            interface grace aux API
-          </h2>
-          <p class="feature-description">
-            Simplifier et fluidifiez votre travail, en personnalisant votre
-            interface <br />
-            grace au API connectez directement a Manageti
+        <div class="item">
+          <img src="assets/images/relation.png" alt="Devis & Gestion client" />
+          <h2>Relation & Gestion client</h2>
+          <p>
+            Personnalisez vos devis, gérez aisément vos offres commerciales en
+            quelques clics, et administrez toutes les données liées à chaque
+            client facilement.
           </p>
-
-          <div class="icon-container">
-            <a href="gestion.html"
-              ><p>Voir toutes nos applications connectés à Manageti</p></a
-            >
-            <img src="assets/images/google-drive.svg" alt="Icone 1" />
-            <img src="assets/images/mailchimp.svg" alt="Icone 2" />
-            <img src="assets/images/slack.svg" alt="Icone 2" />
-            <img src="assets/images/plus.svg" alt="Icone 2" href="" />
-          </div>
+          <hr />
+          <a href="propos.html">DÉCOUVREZ</a>
         </div>
-        <img
-          src="assets/images/soon.png"
-          alt="Image de test"
-          class="feature-image"
-        />
+        <div class="item">
+          <img src="assets/images/Module.png" alt="Sécurité client" />
+          <h2>Espace dédié client</h2>
+          <p>
+            Offrez une expérience remarquable à l’ensemble de vos clients : cet
+            espace centralisé vous permettra de géerer et diffusé votre
+            communication et l’ensemble de vos documents en temps réel
+          </p>
+          <hr />
+          <a href="module.html">DÉCOUVREZ</a>
+        </div>
       </div>
-    </section> -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <filter
+          id="filter0_di_1488_11549"
+          x="0"
+          y="0.599998"
+          width="1613.4"
+          height="1485.62"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dx="51" dy="-25" />
+          <feGaussianBlur stdDeviation="16.2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.17 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1488_11549"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1488_11549"
+            result="shape"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dx="10" dy="-21" />
+          <feGaussianBlur stdDeviation="31.95" />
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.17 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="shape"
+            result="effect2_innerShadow_1488_11549"
+          />
+        </filter>
+      </svg>
+    </div>
+    <!-- Caroussel test -->
 
-    <!-- Devices -->
-    <!-- <section class="layout-section2">
-        <h1> Découvrez notre application <br>
-          desktop & mobile</h1>
-        <div class="content-container2">
-          <img src="assets/images/soon.png" alt="Image de test">
-
-          <div class="text-container2">
-            <h2>Prospects, clients,<br> chantiers en un clic
-              </h2>
-            <p class="mini-text">Découvrez CRM Manageti : simplifiez vos processus, stimulez la <br> croissance.
-              Compatible avec Windows, macOS et Linux, une gestion<br> fluide sur tous les appareils.
-              Gérez clients et données avec simplicité.<br> Transformez votre bureau en hub de productivité dès aujourd'hui.</p>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="layout-section">
-
-        <div class="content-container">
-          <div class="text-container">
-            <h2>L’essentiel pour vos <br>équipe tout en 1
-              </h2>
-            <p class="mini-text">Manageti simplifie la gestion des équipes en centralisant les <br> activités,
-               les prospects et les plannings sur une plateforme <br> conviviale. Analysez vos performances, partagez 
-               des informations <br> clés et gérez vos équipes de manière efficace, tout en libérant votre <br> équipe des 
-               tâches administratives.Optez pour Manageti pour une <br>productivité accrue et une collaboration fluide.</p>
-          </div>
-          <img src="assets/images/soon.png" alt="Image de test">
-        </div>
-      </section> -->
-
+    <!-- Découvrez -->
     <section class="device-section2">
       <h1>
         Découvrez notre application <br />
@@ -587,8 +351,8 @@ https://templatemo.com/tm-570-chain-app-dev
 
           <div class="additional-content">
             <!-- <a href="module.html"
-              ><button class="cta-button">Télécharger</button></a
-            > -->
+                ><button class="cta-button">Télécharger</button></a
+              > -->
             <p>Compatible MacOs, Linux & Windows</p>
             <img src="assets/images/macOs.svg" alt="logo macOs" />
             <img src="assets/images/linux.svg" alt="logo Linus" />
@@ -597,39 +361,7 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </div>
     </section>
-
-    <!-- <section class="device-section">
-      <div class="device-container">
-        <div class="device-text-container">
-          <h2>
-            Manageti du bout <br />
-            des doigts
-          </h2>
-          <p class="device-mini-text">
-            Manageti simplifie la gestion des équipes en centralisant les <br />
-            activités, les prospects et les plannings sur une plateforme <br />
-            conviviale. Analysez vos performances, partagez des informations
-            <br />
-            clés et gérez vos équipes de manière efficace, tout en libérant
-            votre <br />
-            équipe des tâches administratives.Optez pour Manageti pour une
-            <br />productivité accrue et une collaboration fluide.
-          </p>
-
-          <div class="additional-content">
-            <a href="module.html"
-              ><button class="cta-button">Télécharger</button></a
-            >
-            <p>
-              Compatible<br />
-              Android et Ios
-            </p>
-            <img src="assets/images/logo-android_ios.svg" alt="logo macOs" />
-          </div>
-        </div>
-        <img src="assets/images/soon.png" alt="Image de test" />
-      </div>
-    </section> -->
+    <!-- Fin Découvrez -->
 
     <!-- Pourquoi Manageti -->
     <div class="section">
@@ -705,10 +437,7 @@ https://templatemo.com/tm-570-chain-app-dev
     <section class="layout-section">
       <div class="content-container">
         <div class="text-container">
-          <h2>
-            Votre éditeur français,<br />
-            Manageti
-          </h2>
+          <h2>Votre éditeur français, Manageti</h2>
           <p class="mini-text">
             Manageti est un éditeur français spécialisé dans les solutions
             intégrées pour la gestion efficace des entreprises. Offrant une
@@ -728,18 +457,15 @@ https://templatemo.com/tm-570-chain-app-dev
       <h1>COMING SOON!</h1>
       <div class="steps">
         <div class="step">
-          <div class="step-text">Outil de <br />prospection</div>
+          <div class="step-text">Outil de prospection</div>
           <div class="step-circle"></div>
         </div>
         <div class="step">
-          <div class="step-text">
-            Relation & gestion<br />
-            client
-          </div>
+          <div class="step-text">Relation & gestion client</div>
           <div class="step-circle"></div>
         </div>
         <div class="step">
-          <div class="step-text">Espace dédié <br />client</div>
+          <div class="step-text">Espace dédié client</div>
           <div class="step-circle"></div>
         </div>
         <div class="step">
@@ -747,10 +473,7 @@ https://templatemo.com/tm-570-chain-app-dev
           <div class="step-circle"></div>
         </div>
         <div class="step">
-          <div class="step-text">
-            Gestion des<br />
-            interventions
-          </div>
+          <div class="step-text">Gestion des interventions</div>
           <div class="step-circle"></div>
         </div>
       </div>
@@ -759,731 +482,91 @@ https://templatemo.com/tm-570-chain-app-dev
       </div>
     </div>
 
-    <!-- Abonnement -->
-    <!-- <div class="title">
-      <h1>Abonnement</h1>
-      <h3>Tarif & Abonnement</h3>
-    </div>
-
-    <section class="subscription-section">
-      <div class="subscription-widget" id="widget1">
-        <div class="widget-header">
-          <h3>
-            Individuel<img src="assets/images/foudre.png" alt="Icône 1" />
-          </h3>
-        
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <h2>Optimisez vos relations client avec <br />Manageti</h2>
+        <div class="subscribe">
+          <button><a>RESTEZ INFORMEZ</a></button>
+          <input type="email" placeholder="Email" />
         </div>
-        <div class="widget-content">
-          <p class="price">14,90€</p>
-          <p class="price-info">Licence/mois</p>
-          <ul>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 1" /> Import Excel
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 2" /> Gestion des
-              Opportunités
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 3" /> App Mobile
-            </li>
-          </ul>
-          <a href="abonnement.html"><p class="learn-more">En savoir plus</p></a>
-        </div>
-      </div>
-
-      <div class="subscription-widget" id="widget2">
-        <div class="taille">
-          <div class="widget-header2">
-            <h3>
-              Manager<img src="assets/images/etoile.png" alt=" icone etoile" />
-            </h3>
-           
-          </div>
-          <div class="widget-content">
-            <p class="price">19,90€</p>
-            <p class="price-info">Licence/mois</p>
+        <div class="columns">
+          <div class="column">
+            <h3>NAVIGATION</h3>
             <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="abonnement.html">Abonnement</a></li>
+              <li><a href="#">Webinaire</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="essai.html">Essai gratuit</a></li>
+              <li><a href="connexion.html">Espace client</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>NOS SOLUTIONS</h3>
+            <ul>
+              <li><a href="prospection.html">Prospection optimisée</a></li>
+              <li><a href="propos.html">Relation & gestion client</a></li>
+              <li><a href="module.html">Espace dédié client</a></li>
+              <li><a href="ged.html">Gestion Électronique des Documents</a></li>
+              <li><a href="gestion.html">Gestions des interventions</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>MENTION LÉGALE</h3>
+            <ul>
+              <li><a href="#">Condition général de vente</a></li>
+              <li><a href="#">Politique</a></li>
+              <li><a href="#">Service client</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>CONTACTEZ NOUS</h3>
+            <ul>
+              <li><a href="">support@manogeti.com</a></li>
+              <li><a href="#">01 64 72 98 22</a></li>
+              <li><a href="contact.html">Contact</a></li>
               <li>
-                <img src="assets/images/croix.png" alt="Icône 1" /> Avantage
-                pack <strong>Flash</strong>
+                <a href="https://www.linkedin.com/company/manageti/"
+                  >LinkedIn</a
+                >
               </li>
+              <!-- <li><a href="#">Youtube</a></li> -->
+              <!-- <li><a href="#">Facebook</a></li> -->
               <li>
-                <img src="assets/images/croix.png" alt="Icône 2" /> Gestion des
-                Prospects
-              </li>
-              <li>
-                <img src="assets/images/croix.png" alt="Icône 3" /> Suivis des
-                Activités
-              </li>
-              <li>
-                <img src="assets/images/croix.png" alt="Icône 3" /> Taches
-              </li>
-              <li>
-                <img src="assets/images/croix.png" alt="Icône 3" /> Rapport
-                Avancés
+                <a
+                  href="https://www.instagram.com/manageti_officiel?igsh=M2h4b2hlbnZyaGt1"
+                  >Instagram</a
+                >
               </li>
             </ul>
-            <a href="abonnement.html"
-              ><p class="learn-more">En savoir plus</p></a
-            >
           </div>
         </div>
-      </div>
-
-      <div class="subscription-widget" id="widget3">
-        <div class="widget-header3">
-          <h3>
-            Entreprise<img
-              src="assets/images/planete.png"
-              alt=" icone etoile"
-            />
-          </h3>
-          
-        </div>
-        <div class="widget-content">
-          <p class="price">30€</p>
-          <p class="price-info">Licence/mois</p>
-          <ul>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 1" /> Avantage pack
-              <strong>Star</strong>
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 2" /> Script iA /
-              ChatGPT
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 3" />Gestion Script
-              et Email
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 1" /> Gestion des
-              Objectifs
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 2" />Gestions
-              Équipes
-            </li>
-            <li>
-              <img src="assets/images/croix.png" alt="Icône 3" /> Réglages et
-              Sécurité Avancés
-            </li>
-          </ul>
-          <a href="abonnement.html"><p class="learn-more">En savoir plus</p></a>
-        </div>
-      </div>
-    </section> -->
-
-    <!--   -->
-    <!-- <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="service-item first-service">
-              <div class="icon"></div>
-              <h4>App Maintenance</h4>
-              <p>
-                You are not allowed to redistribute this template ZIP file on
-                any other website.
-              </p>
-              <div class="text-button">
-                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
-            </div>
+        <div class="footer-bottom">
+          <img
+            src="assets/images/logo-bas.svg"
+            alt="Manageti Logo"
+            class="footer-logo"
+          />
+          <div class="copyright">
+            &copy; Copyright 2024 Manageti, Inc. Tout droit réservé
           </div>
-          <div class="col-lg-3">
-            <div class="service-item second-service">
-              <div class="icon"></div>
-              <h4>Rocket Speed of App</h4>
-              <p>
-                You are allowed to use the Chain App Dev HTML template. Feel
-                free to modify or edit this layout.
-              </p>
-              <div class="text-button">
-                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="service-item third-service">
-              <div class="icon"></div>
-              <h4>Multi Workflow Idea</h4>
-              <p>
-                If this template is beneficial for your work, please support us
-                <a
-                  rel="nofollow"
-                  href="https://paypal.me/templatemo"
-                  target="_blank"
-                  >a little via PayPal</a
-                >. Thank you.
-              </p>
-              <div class="text-button">
-                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="service-item fourth-service">
-              <div class="icon"></div>
-              <h4>24/7 Help &amp; Support</h4>
-              <p>
-                Lorem ipsum dolor consectetur adipiscing elit sedder
-                williamsburg photo booth quinoa and fashion axe.
-              </p>
-              <div class="text-button">
-                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="about" class="about-us section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <div class="section-heading">
-              <h4>About <em>What We Do</em> &amp; Who We Are</h4>
-
-              <img src="assets/images/heading-line-dec.png" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eismod tempor incididunt ut labore et dolore magna.
-              </p>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="box-item">
-                  <h4><a href="#">Maintance Problems</a></h4>
-                  <p>Lorem Ipsum Text</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="box-item">
-                  <h4><a href="#">24/7 Support &amp; Help</a></h4>
-                  <p>Lorem Ipsum Text</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="box-item">
-                  <h4><a href="#">Fixing Issues About</a></h4>
-                  <p>Lorem Ipsum Text</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="box-item">
-                  <h4><a href="#">Co. Development</a></h4>
-                  <p>Lorem Ipsum Text</p>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eismod tempor idunte ut labore et dolore adipiscing magna.
-                </p>
-                <div class="gradient-button">
-                  <a href="#">Start 14-Day Free Trial</a>
-                </div>
-                <span>*No Credit Card Required</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="right-image">
-              <img src="assets/images/about-right-dec.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="clients" class="the-clients">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div class="section-heading">
-              <h4>Check What <em>The Clients Say</em> About Our App Dev</h4>
-              <img src="assets/images/heading-line-dec.png" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eismod tempor incididunt ut labore et dolore magna.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="naccs">
-              <div class="grid">
-                <div class="row">
-                  <div class="col-lg-7 align-self-center">
-                    <div class="menu">
-                      <div class="first-thumb active">
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <h4>David Martino Co</h4>
-                              <span class="date">30 November 2021</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                              <span class="category">Financial Apps</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.8</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <h4>Jake Harris Nyo</h4>
-                              <span class="date">29 November 2021</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                              <span class="category">Digital Business</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.5</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <h4>May Catherina</h4>
-                              <span class="date">27 November 2021</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                              <span class="category"
-                                >Business &amp; Economics</span
-                              >
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.7</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <h4>Random User</h4>
-                              <span class="date">24 November 2021</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                              <span class="category">New App Ecosystem</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">3.9</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="last-thumb">
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <h4>Mark Amber Do</h4>
-                              <span class="date">21 November 2021</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                              <span class="category">Web Development</span>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.3</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <ul class="nacc">
-                      <li class="active">
-                        <div>
-                          <div class="thumb">
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <div class="client-content">
-                                  <img src="assets/images/quote.png" alt="" />
-                                  <p>
-                                    “Lorem ipsum dolor sit amet, consectetur
-                                    adpiscing elit, sed do eismod tempor idunte
-                                    ut labore et dolore magna aliqua darwin
-                                    kengan lorem ipsum dolor sit amet,
-                                    consectetur picing elit massive big blasta.”
-                                  </p>
-                                </div>
-                                <div class="down-content">
-                                  <img
-                                    src="assets/images/client-image.jpg"
-                                    alt=""
-                                  />
-                                  <div class="right-content">
-                                    <h4>David Martino</h4>
-                                    <span>CEO of David Company</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <div class="thumb">
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <div class="client-content">
-                                  <img src="assets/images/quote.png" alt="" />
-                                  <p>
-                                    “CTO, Lorem ipsum dolor sit amet,
-                                    consectetur adpiscing elit, sed do eismod
-                                    tempor idunte ut labore et dolore magna
-                                    aliqua darwin kengan lorem ipsum dolor sit
-                                    amet, consectetur picing elit massive big
-                                    blasta.”
-                                  </p>
-                                </div>
-                                <div class="down-content">
-                                  <img
-                                    src="assets/images/client-image.jpg"
-                                    alt=""
-                                  />
-                                  <div class="right-content">
-                                    <h4>Jake H. Nyo</h4>
-                                    <span>CTO of Digital Company</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <div class="thumb">
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <div class="client-content">
-                                  <img src="assets/images/quote.png" alt="" />
-                                  <p>
-                                    “May, Lorem ipsum dolor sit amet,
-                                    consectetur adpiscing elit, sed do eismod
-                                    tempor idunte ut labore et dolore magna
-                                    aliqua darwin kengan lorem ipsum dolor sit
-                                    amet, consectetur picing elit massive big
-                                    blasta.”
-                                  </p>
-                                </div>
-                                <div class="down-content">
-                                  <img
-                                    src="assets/images/client-image.jpg"
-                                    alt=""
-                                  />
-                                  <div class="right-content">
-                                    <h4>May C.</h4>
-                                    <span>Founder of Catherina Co.</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <div class="thumb">
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <div class="client-content">
-                                  <img src="assets/images/quote.png" alt="" />
-                                  <p>
-                                    “Lorem ipsum dolor sit amet, consectetur
-                                    adpiscing elit, sed do eismod tempor idunte
-                                    ut labore et dolore magna aliqua darwin
-                                    kengan lorem ipsum dolor sit amet,
-                                    consectetur picing elit massive big blasta.”
-                                  </p>
-                                </div>
-                                <div class="down-content">
-                                  <img
-                                    src="assets/images/client-image.jpg"
-                                    alt=""
-                                  />
-                                  <div class="right-content">
-                                    <h4>Random Staff</h4>
-                                    <span>Manager, Digital Company</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <div class="thumb">
-                            <div class="row">
-                              <div class="col-lg-12">
-                                <div class="client-content">
-                                  <img src="assets/images/quote.png" alt="" />
-                                  <p>
-                                    “Mark, Lorem ipsum dolor sit amet,
-                                    consectetur adpiscing elit, sed do eismod
-                                    tempor idunte ut labore et dolore magna
-                                    aliqua darwin kengan lorem ipsum dolor sit
-                                    amet, consectetur picing elit massive big
-                                    blasta.”
-                                  </p>
-                                </div>
-                                <div class="down-content">
-                                  <img
-                                    src="assets/images/client-image.jpg"
-                                    alt=""
-                                  />
-                                  <div class="right-content">
-                                    <h4>Mark Am</h4>
-                                    <span>CTO, Amber Do Company</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-     </div> -->
-    <!-- 
-    <div id="pricing" class="pricing-tables">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div class="section-heading">
-              <h4>Abonnement</h4> -->
-    <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
-    <!-- <p>
-                Tarif et abonnement
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="pricing-item-regular">
-              <span class="price">$12</span>
-              <h4>Standard Plan App</h4>
-              <div class="icon"> -->
-    <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-    <!-- </div>
-              <ul>
-                <li>Lorem Ipsum Dolores</li>
-                <li>20 TB of Storage</li>
-                <li class="non-function">Life-time Support</li>
-                <li class="non-function">Premium Add-Ons</li>
-                <li class="non-function">Fastest Network</li>
-                <li class="non-function">More Options</li>
-              </ul>
-              <div class="border-button">
-                <a href="#">Purchase This Plan Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="pricing-item-pro">
-              <span class="price">$25</span>
-              <h4>Business Plan App</h4>
-              <div class="icon"> -->
-    <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-    <!-- </div>
-              <ul>
-                <li>Lorem Ipsum Dolores</li>
-                <li>50 TB of Storage</li>
-                <li>Life-time Support</li>
-                <li>Premium Add-Ons</li>
-                <li class="non-function">Fastest Network</li>
-                <li class="non-function">More Options</li>
-              </ul>
-              <div class="border-button">
-                <a href="#">Purchase This Plan Now</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="pricing-item-regular">
-              <span class="price">$66</span>
-              <h4>Premium Plan App</h4>
-              <div class="icon"> -->
-    <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-    <!-- </div>
-              <ul>
-                <li>Lorem Ipsum Dolores</li>
-                <li>120 TB of Storage</li>
-                <li>Life-time Support</li>
-                <li>Premium Add-Ons</li>
-                <li>Fastest Network</li>
-                <li>More Options</li>
-              </ul>
-              <div class="border-button">
-                <a href="#">Purchase This Plan Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <footer id="newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div class="section-heading">
-              <h3>Optimisez vos relations client avec <br />Manageti</h3>
-            </div>
-          </div>
-          <div class="col-lg-6 offset-lg-3">
-            <form id="search" action="#" method="GET">
-              <div class="row">
-                <div class="col-lg-6 col-sm-6">
-                  <fieldset>
-                    <input
-                      type="address"
-                      name="address"
-                      class="email"
-                      placeholder="Email Address..."
-                      autocomplete="on"
-                      required
-                    />
-                  </fieldset>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                  <fieldset>
-                    <button type="submit" class="main-button">
-                      S'abonner <i class="fa fa-angle-right"></i>
-                    </button>
-                  </fieldset>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="footer-widget">
-              <h4>Navigation</h4>
-              <p>Accueil</p>
-              <p><a href="#">A propos</a></p>
-              <p><a href="#">Contact</a></p>
-              <p><a href="#">Abonnement</a></p>
-              <p><a href="#">Connexion</a></p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="footer-widget">
-              <h4>Ce que l’on fait</h4>
-              <ul>
-                <li><a href="#">Fonctionnalité</a></li>
-                <li><a href="#">API</a></li>
-                <li><a href="#">Application Desktop</a></li>
-                <li><a href="#">Application Android</a></li>
-                <li><a href="#">Application Ios</a></li>
-              </ul>
-              <!-- <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Pricing</a></li>
-              </ul> -->
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="footer-widget">
-              <h4>Mention légale</h4>
-              <ul>
-                <li><a href="#">Condition général de vente</a></li>
-                <li><a href="#">Politique</a></li>
-                <li><a href="#">Service client</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="footer-widget">
-              <h4>Contactez nous</h4>
-              <ul>
-                <li><a href="#">Support@manageti.com</a></li>
-                <li><a href="#">+33 6 12 34 56 78</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Linkedin</a></li>
-                <li><a href="#">Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- <div class="col-lg-3">
-            <div class="footer-widget">
-              <h4>Contactez nous</h4>
-              <div class="logo">
-                <img src="assets/images/white-logo.png" alt="" />
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
-              </p>
-            </div>
-          </div> -->
-          <div class="col-lg-12">
-            <div class="footer-logo">
-              <img
-                src="assets/images/logo-bas.svg"
-                alt="Logo de votre entreprise"
-              />
-            </div>
-            <!-- <img src="assets/images/logo2.svg" alt="logo entreprise" /> -->
-            <div class="copyright-text">
-              <p>
-                © Copyright 2024 Manageti, Inc. Tout droit réservé
-                <!-- <img src="assets/images/google-drive.svg" alt="Icone 1" class="footer-icon" />
-                <img src="assets/images/google-drive.svg" alt="Icone 2" class="footer-icon" />
-                <img src="assets/images/google-drive.svg" alt="Icone 3" class="footer-icon" /> -->
-              </p>
-            </div>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/company/manageti/"
+              ><img src="assets/images/linkedin.svg" alt="LinkedIn"
+            /></a>
+            <!-- <a href="#"
+              ><img src="assets/images/Youtube.svg" alt="YouTube"
+            /></a> -->
+            <a
+              href="https://www.instagram.com/manageti_officiel?igsh=M2h4b2hlbnZyaGt1"
+              ><img src="assets/images/instagram.svg" alt="Instagram"
+            /></a>
           </div>
         </div>
       </div>
     </footer>
+    <!-- Footer -->
 
     <!-- Scripts -->
     <script src="vendor/jquery/jquery.min.js"></script>
