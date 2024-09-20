@@ -673,6 +673,86 @@ input:checked + .slider:before {
   padding-right: 70px;
   text-align: justify;
 }
+@media (max-width: 768px) {
+  /* Ajustement des tailles et marges pour les widgets d'abonnement */
+  .subscription-widget {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .highlight-widget {
+    width: 100%;
+    height: auto;
+  }
+
+  .widget-header,
+  .widget-header2,
+  .widget-header3 {
+    font-size: 18px; /* Réduire la taille des titres */
+  }
+
+  .widget-content {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .subscription-widget .price {
+    font-size: 28px; /* Réduire la taille du prix */
+    margin-top: 0;
+  }
+
+  .subscription-widget .learn-more {
+    font-size: 12px; /* Réduire la taille du lien */
+    bottom: 10px; /* Ajuster la position du lien */
+  }
+
+  /* Section de présentation */
+  .pricing-card {
+    width: 100%;
+    height: auto;
+    margin: 0 10px;
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+  }
+
+  .content {
+    flex-direction: column; /* Pour empiler les sections de gauche et de droite */
+    padding: 10px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .separator {
+    display: none; /* Masquer la ligne de séparation pour petits écrans */
+  }
+
+  .price-value {
+    font-size: 30px; /* Réduire la taille de la valeur du prix */
+  }
+
+  .features {
+    margin-left: 0; /* Supprimer la marge à gauche */
+  }
+
+  .features li {
+    font-size: 12px; /* Réduire la taille des textes */
+  }
+
+  .description {
+    padding-right: 0;
+    font-size: 14px;
+    max-width: 450px;
+  }
+}
 
 /* bouton essai gratuit */
 
@@ -880,4 +960,36 @@ input:checked + .slider:before {
   color: white;
   text-decoration: none;
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+  }
+  .footer h2 {
+    font-size: 25px;
+  }
+  .footer .container {
+    margin-top: 90px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer .copyright {
+    align-items: center;
+    margin-left: 25%;
+  }
+
+  .footer-bottom {
+    margin-bottom: 50px;
+  }
+  .footer-logo {
+    height: 25px;
+    margin-right: auto;
+  }
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: -35%;
+  }
 }

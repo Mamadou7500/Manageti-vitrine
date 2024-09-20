@@ -10,6 +10,9 @@ body {
   margin: 0;
   padding-top: 92px;
   background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 header {
   width: 100%;
@@ -73,9 +76,7 @@ header {
 
 .nav-links a:hover {
   font-weight: 600; /* Passage en gras au survol */
-  transform: translateY(
-    -3px
-  ); /* Animation de léger décalage vers le haut au survol */
+  transform: scale(1.1);
 }
 
 .nav-links img {
@@ -158,7 +159,88 @@ header {
     linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
   );
 }
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1010;
+}
 
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--Bleu-nuit, #182832);
+  transition: 0.3s;
+}
+
+/* Animation du hamburger en croix */
+.hamburger-menu.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries pour petits et moyens écrans */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    border-radius: 30px;
+    padding-right: 20px;
+  }
+
+  .nav-buttons {
+    display: none; /* Cache les boutons sur petits écrans */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-links {
+    padding: 0;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+  }
+
+  .logo img {
+    margin-left: 10px;
+  }
+}
 /* Media Queries pour la responsiveness */
 @media screen and (max-width: 1024px) {
   .nav-links {
@@ -167,8 +249,27 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-links {
-    margin-left: 60px; /* Réduire la marge à partir de 768px */
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    margin-top: 20px;
+  }
+
+  .nav-buttons .btn-essai,
+  .nav-buttons .btn-espace-client {
+    margin: 10px 10px;
+    width: 60%; /* Ajuste la largeur des boutons dans le menu */
+    text-align: center;
+  }
+
+  .nav-links.active + .nav-buttons {
+    display: flex; /* S'affiche lorsque le menu est actif */
   }
 }
 
@@ -220,6 +321,7 @@ main {
 }
 
 .hero {
+  margin-top: 190px;
   margin-left: 80px;
   display: flex;
   justify-content: space-between;
@@ -351,38 +453,56 @@ main {
     flex-direction: column;
     margin-left: 0;
     padding: 20px;
+    align-items: center; /* Centre tout horizontalement */
+    text-align: center;
   }
 
   .hero-content {
+    margin-top: 60px;
     margin-right: 0;
     text-align: center;
     padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-content h1 {
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 32px; /* Ajuste la taille pour mobile */
+    line-height: 40px;
   }
 
   .hero-content p {
     font-size: 14px;
     line-height: 24px;
     padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .cta {
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centre les boutons */
   }
 
   .cta span {
     margin-left: 0;
     margin-top: 10px;
+    text-align: center;
+  }
+
+  /* Centrage de l'image */
+  .hero-image {
+    margin-top: 20px; /* Espace entre le contenu et l'image */
+    display: flex;
+    justify-content: center; /* Centre horizontalement l'image */
+    width: 100%; /* Prend la largeur de l'écran */
   }
 
   .hero-image img {
-    width: 100%;
+    max-width: 90%; /* L'image occupe 90% de la largeur maximale */
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -419,9 +539,11 @@ main {
   }
 
   .hero-image img {
-    /* margin-top: 10%; */
+    margin-top: 5%;
     width: 45%;
     height: auto;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -434,7 +556,7 @@ main {
 } */
 
 /* Carousel */
-.carousel-container {
+/* .carousel-container {
   text-align: center;
   background: linear-gradient(
     60deg,
@@ -591,7 +713,7 @@ main {
 
 .nav-button.active {
   opacity: 1;
-}
+} */
 /* Fin Carousel */
 
 /* Caroussel test */
@@ -635,8 +757,9 @@ main {
 }
 
 .item {
-  height: 680px; /* Adjusted height */
-  width: 426px; /* Adjusted width */
+  height: 680px;
+  width: 426px;
+  padding-right: 1000px;
   /* Effect drop shadow card */
   box-shadow: 5px 7px 20px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
@@ -741,6 +864,72 @@ main {
   background: #fff;
   transform: scale(1);
 }
+@media (max-width: 768px) {
+  .curve {
+    height: 850px;
+  }
+  .slider {
+    width: 95%; /* Réduit la largeur du carousel */
+    max-width: 600px; /* Définit une largeur maximale pour les petits écrans */
+  }
+
+  .item {
+    height: 130%;
+    width: 56%; /* Ajuste la largeur des éléments */
+    max-width: 100%; /* Assure que les éléments ne dépassent pas */
+    transform: scale(1); /* Réinitialise l'échelle */
+    padding: 10px; /* Réduit le padding */
+    box-shadow: none; /* Enlève l'ombre pour une meilleure adaptation */
+  }
+
+  .item.active {
+    height: 135%;
+    width: 80%; /* Ajuste la largeur des éléments */
+    max-width: 100%; /* Assure que les éléments ne dépassent pas */
+    transform: scale(1); /* Réinitialise l'échelle */
+    padding: 10px; /* Réduit le padding */
+    box-shadow: none; /* Enlève l'ombre pour une meilleure adaptation */
+  }
+
+  .item p {
+    /* padding: 30px; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24.5px;
+    letter-spacing: 0.3px;
+    background: linear-gradient(
+      88deg,
+      #2c165c -18.58%,
+      #881656 35.08%,
+      #ce3937 90.32%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-align-last: left;
+    height: 100px; /* Fixe la hauteur pour éviter les changements */
+    overflow: hidden; /* Ajoute cette ligne pour couper le texte si nécessaire */
+    transition: none; /* Désactive les transitions pour le texte */
+  }
+
+  .item a {
+    font-size: 16px;
+  }
+
+  .item img {
+    height: 40%;
+    width: 55%; /* Réduit la largeur des images */
+  }
+
+  .curve h1 {
+    font-size: 26px; /* Réduit la taille de la police du titre */
+    line-height: 32px; /* Ajuste la hauteur de ligne du titre */
+    margin-bottom: 20px; /* Ajuste la marge inférieure du titre */
+  }
+}
 
 /* fin */
 
@@ -748,8 +937,23 @@ main {
 /* 2 */
 .device-section2 {
   text-align: center;
+  padding: 0 20px; /* Padding global */
 }
 
+.device-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre horizontalement */
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.device-text-container2 {
+  text-align: left;
+  padding: 0 20px;
+  max-width: 500px; /* Limite la largeur du texte */
+  word-wrap: break-word; /* Forcer le retour à la ligne */
+}
 .device-section2 h1 {
   margin-top: 150px;
   font-size: 53px;
@@ -765,30 +969,11 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.device-container2 {
-  display: flex;
-  align-items: center;
-  justify-content: justify;
-  margin-left: 300px;
-  margin-right: 15%;
-}
-
-.device-text-container2 {
-  /* /* flex: 1; */
-  text-align: left;
-  justify-content: justify;
-  padding-left: 180px; /* Ajoute un espacement à gauche du texte */
-}
-
 .device-text-container2 h2 {
-  /* font-family: Poppins; */
-  font-size: 44px;
-  font-style: normal;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 72px; /* 163.636% */
+  line-height: 52px;
   letter-spacing: 0.3px;
-
   background: linear-gradient(
     88deg,
     #121214 -39.37%,
@@ -802,26 +987,19 @@ main {
 }
 
 .device-mini-text {
-  margin-top: 6%;
-  color: var(--Bleu-nuit, #182832);
+  margin-top: 20px;
+  color: #182832;
   text-align: justify;
-  /* font-family: Poppins; */
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px; /* 175% */
-  letter-spacing: 0.3px;
-  margin-bottom: 6%;
+  line-height: 28px;
+  word-wrap: break-word;
 }
 
 .device-container2 img {
-  /* max-width: 100%; */
-  margin-top: 10%;
-  margin-left: -100px;
-  width: 624px;
-  height: 490px;
-  flex-shrink: 0;
-  margin-right: 1%;
+  width: 100%;
+  max-width: 624px;
+  height: auto;
+  margin-right: 20px;
 }
 
 .additional-content {
@@ -830,126 +1008,56 @@ main {
   margin-top: 20px;
 }
 
-/* .cta-button {
-    display: flex;
-    color: #ffffff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    width: 184px;
-    height: 56px;
-    padding: 18px 30px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-  
-    border-radius: 22px;
-    border: 1px solid var(--STORK, rgba(255, 255, 255, 0.4));
-    background: var(
-      --button-2,
-      linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
-    );
-  } */
-
 .additional-content p {
-  margin-left: 70px;
-  display: flex;
-  width: 301px;
-  height: 39px;
-  flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
-
-  color: var(--Bleu-nuit, #182832);
-  /* font-family: Poppins; */
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 28px; /* 175% */
-  letter-spacing: 0.3px;
-  margin-right: 110px;
+  margin-left: 20px;
+  word-wrap: break-word;
 }
 
 .additional-content img {
-  width: 37.714px;
-  height: 37.714px;
-  flex-shrink: 0;
-  margin-top: 5px;
-  /* padding-left: 1px; */
-
-  margin-right: 120px;
-  max-width: 20%; /* ajustez la valeur selon vos besoins */
-  /* margin: 0 auto; */
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
 }
 
-/* Écrans moyens (tablettes) */
+/* Adaptations pour les écrans moyens */
 @media (max-width: 900px) {
-  .device-section2 h1 {
-    font-size: 40px;
-    line-height: 60px;
-    margin-top: 30px;
-  }
-
   .device-container2 {
-    flex-direction: column; /* Passage en colonne sur les petits écrans */
+    flex-direction: column;
     margin: 20px auto;
-    align-items: center; /* Centre les éléments */
+    align-items: center;
   }
 
   .device-text-container2 {
     text-align: center;
     padding: 0;
-    max-width: 100%; /* Permet au texte de s'adapter à la largeur de l'écran */
   }
 
-  .device-text-container2 h2 {
-    font-size: 36px;
-    line-height: 52px;
+  .device-container2 img {
+    margin-bottom: 20px;
+    max-width: 80%;
   }
+}
 
-  .device-mini-text {
-    font-size: 14px;
-    line-height: 24px;
+/* Adaptations pour les petits écrans */
+@media (max-width: 600px) {
+  .device-section2 h1 {
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 20px;
   }
 
   .device-container2 img {
     max-width: 100%;
-    margin-bottom: 20px; /* Ajoute de l'espace en dessous de l'image */
-  }
-
-  .additional-content p {
-    font-size: 14px;
-    margin: 5px;
-  }
-
-  .additional-content img {
-    width: 30px;
-  }
-}
-
-/* Écrans petits (téléphones portables) */
-@media (max-width: 600px) {
-  .device-section2 h1 {
-    font-size: 33px;
-    line-height: 50px;
-    margin-top: 20px;
-  }
-
-  .device-container2 {
-    flex-direction: column;
-    align-items: center; /* Centre les éléments */
-    margin: 20px auto;
   }
 
   .device-text-container2 {
     text-align: center;
     padding: 0;
-    max-width: 100%; /* Permet au texte de s'adapter à la largeur de l'écran */
+    max-width: 90%;
   }
 
   .device-text-container2 h2 {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 40px;
   }
 
@@ -958,26 +1066,15 @@ main {
     line-height: 20px;
   }
 
-  .device-container2 img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* Ajoute de l'espace en dessous de l'image */
-  }
-
-  .additional-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .additional-content p {
     font-size: 12px;
-    margin: 5px;
+    margin-right: 30px;
   }
-
   .additional-content img {
-    width: 25px;
+    width: 5%;
   }
 }
+
 /* Fin découvrez */
 
 /* Pourquoi manageti */
@@ -1122,6 +1219,45 @@ main {
   );
   margin: 10px 0;
 }
+
+/* Écrans petits (téléphones portables) */
+@media (max-width: 600px) {
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .section p {
+    font-size: 14px;
+    margin: 15px;
+  }
+
+  .vignette {
+    width: 250px; /* Largeur des vignettes */
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .widget-container {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    flex-direction: column;
+  }
+
+  .widget {
+    margin: 10px;
+    width: 431px;
+    height: 230px;
+  }
+  .widget-container h3 {
+    text-align: center;
+  }
+  .widget-container p {
+    text-align: justify;
+  }
+}
 /* fin */
 
 .layout-section {
@@ -1210,19 +1346,7 @@ main {
 
 @media (max-width: 768px) {
   .layout-section h1 {
-    margin-top: 100px;
     font-size: 43px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 82px; /* 154.717% */
-    letter-spacing: 0.3px;
-    background: var(
-      --button-2,
-      linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .text-container h2 {
@@ -1259,10 +1383,71 @@ main {
     padding: 0 20px; /* Ajouter un peu d'espace autour du texte */
   }
 }
+/* Media Queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .layout-section h1 {
+    margin-top: 100px;
+    font-size: 40px; /* Réduire la taille du titre pour les petits écrans */
+    line-height: 60px;
+  }
+
+  .content-container {
+    flex-direction: column; /* Empiler les éléments sur les petits écrans */
+    padding-left: 0; /* Supprimer le padding gauche */
+    justify-content: center;
+  }
+
+  .text-container {
+    padding-right: 0;
+    text-align: center; /* Centrer le texte sur les petits écrans */
+  }
+
+  .text-container h2 {
+    font-size: 28px; /* Réduire la taille de la police pour les petits écrans */
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .mini-text {
+    font-size: 14px; /* Réduire la taille du texte pour les petits écrans */
+    line-height: 24px;
+    padding: 0 20px; /* Ajouter un peu d'espace autour du texte */
+  }
+
+  .content-container img {
+    width: 300px; /* Réduire la taille de l'image */
+    height: 300px;
+    margin: 20px 0; /* Ajouter de la marge au-dessus et en dessous de l'image */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .layout-section h1 {
+    font-size: 32px; /* Réduire encore plus la taille du titre pour très petits écrans */
+    line-height: 48px;
+  }
+
+  .text-container h2 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .mini-text {
+    font-size: 13px;
+    line-height: 22px;
+    margin: 15px;
+  }
+
+  .content-container img {
+    width: 250px; /* Réduire encore plus l'image pour les très petits écrans */
+    height: 250px;
+  }
+}
 
 /* coming soon */
 .timeline {
   text-align: center;
+  padding: 40px 0;
 }
 
 .timeline h1 {
@@ -1289,17 +1474,6 @@ main {
   text-align: center;
 }
 
-.step:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  /* background: #ddd; */
-  z-index: -1;
-}
-
 .step-circle {
   width: 40px;
   height: 40px;
@@ -1310,32 +1484,24 @@ main {
   position: relative;
   margin-top: 10px;
 }
-/* 
-.step:nth-child(1) .step-circle,
-.step:nth-child(2) .step-circle {
-  background: linear-gradient(to right, #ff6e4e, #9a1f59);
-  border: none;
-} */
 
 .step-text {
   text-align: center;
-  /* font-family: Poppins; */
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: 20px; /* 125% */
+  line-height: 20px;
   letter-spacing: 0.3px;
   width: 150px;
   margin-left: 20px;
   word-wrap: break-word;
-
-  background: var(
+  /* background: var(
     --Gradient,
     linear-gradient(164deg, #881656 1.49%, #ce3937 76.68%)
   );
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #000;
 }
 
 .progress-bar {
@@ -1346,7 +1512,6 @@ main {
   background: #ddd;
   border-radius: 5px;
   margin: -40px auto;
-
   border-radius: 53px;
   background: #f5f5f5;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25) inset;
@@ -1357,6 +1522,75 @@ main {
   height: 100%;
   background: linear-gradient(to right, #ff6e4e, #9a1f59);
   border-radius: 53px;
+}
+
+/* Styles pour petits écrans (barre verticale unie) */
+@media screen and (max-width: 768px) {
+  .timeline h1 {
+    font-size: 36px;
+  }
+  .steps {
+    flex-direction: column; /* Les étapes deviennent verticales */
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .step {
+    margin-bottom: 30px;
+  }
+
+  .step-text {
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+  }
+
+  /* Barre verticale unie */
+  .steps:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 10px; /* Épaissir la barre verticale */
+    background: #ddd; /* Barre vide */
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  .step-circle {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-text {
+    margin: 10px 0;
+    width: auto;
+    text-align: center;
+    color: #000;
+  }
+
+  /* Barre de progression remplie à 40% du haut vers le bas */
+  .steps:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 6px;
+    height: 40%; /* Remplissage à 40% */
+    background: linear-gradient(to bottom, #ff6e4e, #9a1f59);
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  .progress-bar {
+    display: none; /* On n'utilise plus la barre horizontale */
+  }
+
+  .progress {
+    display: none; /* La barre horizontale ne s'affiche pas en mobile */
+  }
 }
 /* fin */
 
@@ -1381,9 +1615,9 @@ main {
 
 .footer .container {
   margin-top: 90px;
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
+  /* max-width: 1400px; */
+  /* width: 100%; */
+  /* padding: 20px; */
   box-sizing: border-box;
 }
 
@@ -1530,6 +1764,35 @@ main {
   color: white;
   text-decoration: none;
   font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 1650px;
+  }
+  .footer h2 {
+    font-size: 25px;
+  }
+  .footer .container {
+    margin-top: 90px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer .copyright {
+    align-items: center;
+    margin-left: 25%;
+  }
+  .footer-logo {
+    height: 25px;
+    margin-right: auto;
+  }
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: -35%;
+  }
 }
 
 /*  */

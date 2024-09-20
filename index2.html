@@ -56,65 +56,68 @@ https://templatemo.com/tm-570-chain-app-dev
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header
-      class="header-area header-sticky wow slideInDown"
-      data-wow-duration="0.75s"
-      data-wow-delay="0s"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <!-- ***** Logo Start ***** -->
-              <a href="index.html" class="logo">
-                <img src="assets/images/logo2.svg" alt="logo entreprise" />
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar scroll</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Link
               </a>
-              <!-- ***** Logo End ***** -->
-              <!-- ***** Menu Start ***** -->
-              <ul class="nav">
-                <li class="scroll-to-section">
-                  <a href="#top" class="active">Accueil</a>
-                </li>
-                <li class="scroll-to-section">
-                  <a>Nos fonctionnalités ▼</a>
-                  <ul class="submenu">
-                    <li><a href="#">Logiciel de prospection</a></li>
-                    <li><a href="propos.html">Relation & gestion client</a></li>
-                    <li><a href="#">Interface espace client</a></li>
-
-                    <li><a href="#">Gestion des Documents eléctronique</a></li>
-                    <li>
-                      <a href="prospection.html">Gestions des interventions</a>
-                    </li>
-                    <!-- <li><a href="#">Gestion des Documents eléctronique</a></li> -->
-                  </ul>
-                </li>
-                <li class="scroll-to-section">
-                  <a href="contact.html">Contact</a>
-                </li>
-                <li class="scroll-to-section">
-                  <a href="abonnement.html">Abonnement</a>
-                </li>
-                <li class="scroll-to-section">
-                  <a href="#newsletter">Connexion</a>
-                </li>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <div class="gradient-button">
-                    <a id="modal_trigger" href="#modal"
-                      ><i class="fa fa-sign-in-alt"></i> S’inscrire</a
-                    >
-                  </div>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
-              <a class="menu-trigger">
-                <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
-            </nav>
-          </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Link</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
-    </header>
+    </nav>
     <!-- ***** Header Area End ***** -->
 
     <div id="modal" class="popupContainer" style="display: none">

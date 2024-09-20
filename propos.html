@@ -10,9 +10,9 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <img src="assets/images/logo2.svg" alt="Logo" />
-        </div>
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo2.svg" alt="logo entreprise" />
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
           <li class="dropdown">
@@ -29,21 +29,20 @@
           </li>
           <li><a href="abonnement.html">Abonnement</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">
-              Webinaire
-              <!-- Webinaire<img src="assets/images/fleche.svg" alt="Flèche" /> -->
-            </a>
-            <div class="dropdown-content">
-              <!-- <a href="#">Webinaire 1</a>
-              <a href="#">Webinaire 2</a>
-              <a href="#">Webinaire 3</a> -->
-            </div>
+            <a href="#" class="dropdown-toggle">Webinaire</a>
+            <div class="dropdown-content"></div>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-buttons">
           <a href="essai.html" class="btn-essai">Essai gratuit</a>
           <a href="connexion.html" class="btn-espace-client">Espace client</a>
+        </div>
+        <!-- Menu Hamburger pour petits écrans -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
     </header>
@@ -87,12 +86,9 @@
           <h2>Gestion des <br />offres & devis</h2>
           <p class="mini-text">
             Simplifiez le processus d'élaboration d'offres et de devis. Créez
-            des<br />
-            documents professionnels en quelques clics, personnalisez-les
-            selon<br />
-            les besoins de vos clients et suivez chaque proposition jusqu'à
-            la<br />
-            signature.
+            des documents professionnels en quelques clics, personnalisez-les
+            selon les besoins de vos clients et suivez chaque proposition
+            jusqu'à la signature.
           </p>
         </div>
         <img
@@ -110,16 +106,13 @@
         />
 
         <div class="text-container2">
-          <h2>Créer votre <br />catalogue produits</h2>
+          <h2>Créez votre <br />catalogue produits</h2>
           <p class="mini-text">
-            Découvrez notre plateforme simplifiée pour créer et gérer votre<br />
+            Découvrez notre plateforme simplifiée pour créer et gérer votre
             catalogue de produits en toute simplicité. Avec des outils
-            intuitifs,<br />
-            personnalisez vos listings pour captiver vos clients et optimisez
-            votre<br />
-            inventaire sans tracas. Rejoignez Manageti dès aujourd'hui pour
-            libérer<br />
-            tout le potentiel de votre entreprise.
+            intuitifs, personnalisez vos listings pour captiver vos clients et
+            optimisez votre inventaire sans tracas. Rejoignez Manageti dès
+            aujourd'hui pour libérer tout le potentiel de votre entreprise.
           </p>
         </div>
       </div>
@@ -178,13 +171,13 @@
 
       <!-- Widget 2 -->
       <div class="custom-col-lg-4 custom-widget ml-2">
-        <h3>Gerer le suivis des <br />activités</h3>
+        <h3>Gérez le suivis des <br />activités</h3>
       </div>
 
       <!-- Widget 3 -->
       <div class="custom-col-lg-4 custom-widget ml-2">
         <h3>
-          Améliorer votre <br />
+          Améliorez votre <br />
           communication
         </h3>
       </div>
@@ -197,7 +190,7 @@
       <div class="container">
         <h2>Optimisez vos relations client avec <br />Manageti</h2>
         <div class="subscribe">
-          <button><a>RESTEZ INFORMEZ</a></button>
+          <button><a href="essai.html">RESTEZ INFORMEZ</a></button>
           <input type="email" placeholder="Email" />
         </div>
         <div class="columns">
@@ -233,11 +226,13 @@
           <div class="column">
             <h3>CONTACTEZ NOUS</h3>
             <ul>
-              <li><a href="">support@manogeti.com</a></li>
+              <li><a href="">support@manageti.com</a></li>
               <li><a href="#">01 64 72 98 22</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li>
-                <a href="https://www.linkedin.com/company/manageti/"
+                <a
+                  href="https://www.linkedin.com/company/manageti/"
+                  target="_blank"
                   >LinkedIn</a
                 >
               </li>
@@ -246,6 +241,7 @@
               <li>
                 <a
                   href="https://www.instagram.com/manageti_officiel?igsh=M2h4b2hlbnZyaGt1"
+                  target="_blank"
                   >Instagram</a
                 >
               </li>
@@ -262,7 +258,7 @@
             &copy; Copyright 2024 Manageti, Inc. Tout droit réservé
           </div>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/company/manageti/"
+            <a href="https://www.linkedin.com/company/manageti/" target="_blank"
               ><img src="assets/images/linkedin.svg" alt="LinkedIn"
             /></a>
             <!-- <a href="#"
@@ -270,6 +266,7 @@
             /></a> -->
             <a
               href="https://www.instagram.com/manageti_officiel?igsh=M2h4b2hlbnZyaGt1"
+              target="_blank"
               ><img src="assets/images/instagram.svg" alt="Instagram"
             /></a>
           </div>
@@ -277,5 +274,17 @@
       </div>
     </footer>
     <!-- Footer -->
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/test.js"></script>
   </body>
 </html>

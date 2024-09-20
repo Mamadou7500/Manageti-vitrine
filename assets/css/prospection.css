@@ -149,6 +149,88 @@ header {
     linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
   );
 }
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--Bleu-nuit, #182832);
+  transition: 0.3s;
+}
+
+/* Animation du hamburger en croix */
+.hamburger-menu.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries pour petits et moyens écrans */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    border-radius: 30px;
+    padding-right: 20px;
+  }
+
+  .nav-buttons {
+    display: none; /* Cache les boutons sur petits écrans */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-links {
+    padding: 0;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+  }
+
+  .logo img {
+    margin-left: 10px;
+  }
+}
 
 /* Media Queries pour la responsiveness */
 @media screen and (max-width: 1024px) {
@@ -214,22 +296,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .centered-container {
   text-align: center;
-  max-width: 100%;
+  max-width: 90%; /* Limite la largeur maximale du conteneur pour éviter les lignes trop larges */
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .centered-container h1 {
-  text-align: center;
-
   font-size: 53px;
   font-style: normal;
   font-weight: 700;
-  line-height: 82px; /* 154.717% */
+  line-height: 82px;
   letter-spacing: 0.3px;
-
   background: linear-gradient(
     88deg,
     #121214 -39.37%,
@@ -240,15 +326,16 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .centered-container p {
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 24.5px; /* 153.125% */
+  line-height: 24.5px;
   letter-spacing: 0.3px;
-
   background: var(
     --button-2,
     linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
@@ -256,68 +343,88 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px; /* Limite la largeur du texte pour éviter les lignes trop larges */
+  margin: 0 auto; /* Centre le texte horizontalement */
 }
 
 @media only screen and (max-width: 768px) {
   .centered-container h1 {
     font-size: 30px;
+    line-height: 45px;
+  }
+
+  .centered-container p {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 90%; /* Ajuste la largeur maximale pour les petits écrans */
+  }
+
+  .custom-widget-and-text {
+    flex-direction: column;
+    margin-top: 40px;
+    margin-right: 0;
+  }
+
+  .custom-widget-left {
+    margin-left: 0;
+    margin-bottom: 20px;
+    flex: none;
+    width: 100%;
+  }
+
+  .custom-widget-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .custom-text-right {
+    padding-left: 0;
+    flex: none;
+    width: 100%;
+  }
+
+  .custom-text-right h2 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .custom-text-right p {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 90%; /* Ajuste la largeur maximale pour les petits écrans */
   }
 }
 
-/* ... */
+@media only screen and (max-width: 576px) {
+  .centered-container h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
 
-.custom-widget-and-text {
-  display: flex;
-  margin-top: 60px; /* Espace entre les deux sections */
-  margin-right: 20px;
+  .centered-container p {
+    font-size: 12px;
+    line-height: 20px;
+    max-width: 90%; /* Ajuste la largeur maximale pour les très petits écrans */
+  }
+
+  .custom-widget-left {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .custom-text-right h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .custom-text-right p {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 90%; /* Ajuste la largeur maximale pour les très petits écrans */
+  }
 }
-
-.custom-widget-left {
-  margin-left: 15%;
-  flex: 1; /* Prend tout l'espace disponible */
-}
-
-.custom-widget-left img {
-  width: 70%; /* Image prend tout l'espace de la widget */
-  height: auto;
-  border-radius: 22px;
-  margin-right: 20px;
-}
-
-.custom-text-right {
-  flex: 1; /* Prend tout l'espace disponible */
-  padding-left: 0px; /* Ajoute un espacement entre la widget gauche et le texte */
-}
-
-.custom-text-right h2 {
-  font-size: 43px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 60px; /* 154.717% */
-  letter-spacing: 0.3px;
-
-  background: linear-gradient(
-    88deg,
-    #121214 -39.37%,
-    #2c165c -0.45%,
-    #881656 49.04%,
-    #ce3937 74.08%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.custom-text-right p {
-  color: var(--Bleu-nuit, #182832);
-  text-align: justify;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px; /* 175% */
-  letter-spacing: 0.3px;
-}
-
 /* ... */
 
 .custom-widget-row {
@@ -401,15 +508,6 @@ body {
 
 /* layout */
 
-/* .layout-section {
-      text-align: center;
-    } */
-
-/* * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-} */
 .curve {
   background: linear-gradient(
     160deg,
@@ -444,7 +542,7 @@ body {
   height: 1184.449px;
 }
 
-.layout-section2 {
+/* .layout-section2 {
   text-align: center;
   margin-top: 5%;
 }
@@ -454,7 +552,7 @@ body {
   font-size: 53px;
   font-style: normal;
   font-weight: 700;
-  line-height: 82px; /* 154.717% */
+  line-height: 82px; 
   letter-spacing: 0.3px;
   background: var(
     --button-2,
@@ -463,16 +561,145 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+} */
+
+/*  */
+.layout-section {
+  text-align: center;
+  margin-top: -13%;
 }
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* margin-right: 15%; */
+  /* margin-bottom: 10%; */
+}
+
+.text-container {
+  /* /* flex: 1; */
+  text-align: left;
+  padding-right: 90px; /* Ajoute un espacement à droite du texte */
+  margin-left: 5%;
+}
+
+.text-container h2 {
+  flex: 1;
+  text-align: left;
+  font-size: 53px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82px; /* 154.717% */
+  padding-right: 20px;
+  color: #fff;
+}
+
+.mini-text {
+  color: #fff;
+  text-align: justify;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+  max-width: 600px;
+}
+
+.layout-section img {
+  width: 25%;
+  height: auto;
+  border-radius: 22px;
+  /* margin-right: 10px; */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Pour les tablettes (écrans moyens) */
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centre les éléments horizontalement et verticalement */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .text-container {
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%; /* Assure que le texte prend toute la largeur disponible */
+  }
+
+  .text-container h2 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */
+  }
+
+  .mini-text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    padding: 0 20px; /* Ajoute un peu de padding sur les côtés */
+  }
+
+  .layout-section img {
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Ajoute de l'espace en dessous de l'image */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* Pour les petits écrans (téléphones) */
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .text-container {
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .text-container h2 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .mini-text {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: justify;
+    padding: 0 15px;
+  }
+
+  .layout-section img {
+    width: 80%;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/*  */
 
 .content-container2 {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 5%;
-  /* margin-left: 300px; */
-  /* margin-right: 15%; */
-  /* margin-left: 20%; */
 }
 
 .text-container2 {
@@ -539,79 +766,6 @@ body {
 }
 
 /* layout section */
-
-.layout-section {
-  text-align: center;
-  margin-top: -13%;
-}
-
-.content-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* margin-right: 15%; */
-  /* margin-bottom: 10%; */
-}
-
-.text-container {
-  /* /* flex: 1; */
-  text-align: left;
-  padding-right: 90px; /* Ajoute un espacement à droite du texte */
-  margin-left: 5%;
-}
-
-.text-container h2 {
-  flex: 1;
-  text-align: left;
-  font-size: 53px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 82px; /* 154.717% */
-  padding-right: 20px;
-  color: #fff;
-}
-
-.mini-text {
-  color: #fff;
-  text-align: justify;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0.3px;
-}
-
-.layout-section img {
-  width: 25%;
-  height: auto;
-  border-radius: 22px;
-  /* margin-right: 10px; */
-}
-
-@media only screen and (max-width: 768px) {
-  .text-container h2 {
-    font-size: 30px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .mini-text {
-    text-align: justify;
-    /* margin-right: 15%; */
-  }
-
-  .content-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-container,
-  .content-container img {
-    margin-top: 0;
-    order: 2;
-  }
-}
 
 /* widget */
 .widget-container {
@@ -755,6 +909,16 @@ body {
   margin: 10px 0;
 }
 
+@media only screen and (max-width: 576px) {
+  .section h2 {
+    font-size: 26px;
+  }
+
+  .section p {
+    font-size: 12px;
+  }
+}
+
 /* Body */
 
 .body-section {
@@ -830,24 +994,52 @@ body {
 @media only screen and (max-width: 768px) {
   .body-text h2 {
     font-size: 30px;
-    justify-content: center;
+    line-height: 40px;
     text-align: center;
+    margin-bottom: 20px; /* Ajoute une marge en dessous du titre */
   }
 
-  .body-text {
-    text-align: justify;
-    /* margin-right: 15%; */
+  .body-text p {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 20px; /* Ajoute un padding pour les petits écrans */
   }
 
   .body-container {
     flex-direction: column;
     text-align: center;
+    margin-left: 0; /* Retire le margin-left pour les petits écrans */
   }
 
-  .body-container,
   .body-section img {
-    margin-top: 0;
-    order: 2;
+    width: 100%; /* Ajuste la largeur de l'image à 100% pour les écrans moyens */
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Styles responsive pour petits écrans (max-width: 576px) */
+@media only screen and (max-width: 576px) {
+  .body-text h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px; /* Réduit la marge en dessous du titre */
+  }
+
+  .body-text p {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 15px; /* Ajuste le padding pour les petits écrans */
+  }
+
+  .body-section {
+    margin-top: 10%; /* Ajuste le margin-top pour les petits écrans */
+  }
+
+  .body-section img {
+    width: 100%; /* Ajuste la largeur de l'image à 100% pour les petits écrans */
+    height: auto;
+    margin-top: 15px;
   }
 }
 
@@ -913,25 +1105,56 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .text-container2 h2 {
-    font-size: 30px;
-    text-align: justify;
-  }
-
-  .mini-text {
-    text-align: justify;
-    margin-right: 15%;
-  }
-
-  .content-container2 {
+  .contenu {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-left: 0; /* Retire le margin-left pour les petits écrans */
   }
 
-  .text-container2,
-  .content-container2 img {
-    margin-top: 0;
-    order: 2;
+  .contenu-container2 {
+    padding-left: 0; /* Retire le padding à gauche pour les petits écrans */
+    padding-right: 0; /* Retire le padding à droite pour les petits écrans */
+  }
+
+  .contenu-container2 h2 {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */
+  }
+
+  .contenu-minitext {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 20px; /* Ajoute un padding pour les petits écrans */
+  }
+
+  .contenu img {
+    max-width: 80%; /* Ajuste la largeur de l'image pour les petits écrans */
+    margin-right: 0; /* Retire la marge droite pour les petits écrans */
+    margin-top: 20px; /* Ajoute un peu de marge en haut de l'image */
+  }
+}
+
+/* Styles responsive pour petits écrans (max-width: 576px) */
+@media only screen and (max-width: 576px) {
+  .contenu-container2 h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 15px; /* Réduit la marge en dessous du titre */
+  }
+
+  .contenu-minitext {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 15px; /* Réduit le padding pour les petits écrans */
+  }
+
+  .contenu img {
+    max-width: 60%; /* Ajuste la largeur de l'image pour les très petits écrans */
+    margin-top: 15px; /* Réduit la marge en haut de l'image */
   }
 }
 
@@ -1103,4 +1326,32 @@ body {
   color: white;
   text-decoration: none;
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 1250px;
+  }
+  .footer h2 {
+    font-size: 25px;
+  }
+  .footer .container {
+    margin-top: 90px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer .copyright {
+    align-items: center;
+    margin-left: 25%;
+  }
+  .footer-logo {
+    height: 25px;
+    margin-right: auto;
+  }
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: -35%;
+  }
 }

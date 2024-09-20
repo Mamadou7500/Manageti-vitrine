@@ -149,7 +149,88 @@ header {
     linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
   );
 }
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1010;
+}
 
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--Bleu-nuit, #182832);
+  transition: 0.3s;
+}
+
+/* Animation du hamburger en croix */
+.hamburger-menu.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries pour petits et moyens écrans */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    border-radius: 30px;
+    padding-right: 20px;
+  }
+
+  .nav-buttons {
+    display: none; /* Cache les boutons sur petits écrans */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-links {
+    padding: 0;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+  }
+
+  .logo img {
+    margin-left: 10px;
+  }
+}
 /* Media Queries pour la responsiveness */
 @media screen and (max-width: 1024px) {
   .nav-links {
@@ -626,6 +707,77 @@ input:checked + .slider:before {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+
+  .title h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .subscription-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscription-widget {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px 0;
+  }
+
+  .subscription-widget .widget-content {
+    padding: 30px;
+  }
+
+  .prospection-software,
+  .license-text,
+  .price-info {
+    font-size: 12px;
+  }
+
+  .learn-more {
+    font-size: 12px;
+  }
+
+  .essai_gratuit {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* Styles pour les écrans moyens */
+@media (max-width: 1024px) {
+  .title h1 {
+    font-size: 46px;
+    line-height: 65px;
+  }
+
+  .title h3 {
+    font-size: 22px;
+    line-height: 60px;
+  }
+
+  .subscription-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscription-widget {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  .subscription-widget .widget-content {
+    padding: 50px;
+  }
+}
 /* Fin abonnement */
 
 /* bouton essai gratuit */
@@ -833,4 +985,36 @@ input:checked + .slider:before {
   color: white;
   text-decoration: none;
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+  }
+  .footer h2 {
+    font-size: 25px;
+  }
+  .footer .container {
+    margin-top: 90px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer .copyright {
+    align-items: center;
+    margin-left: 25%;
+  }
+
+  .footer-bottom {
+    margin-bottom: 50px;
+  }
+  .footer-logo {
+    height: 25px;
+    margin-right: auto;
+  }
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-left: -35%;
+  }
 }

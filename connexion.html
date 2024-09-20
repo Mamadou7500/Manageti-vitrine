@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="assets/css/connexion.css" />
     <!-- <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css" /> -->
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <img src="assets/images/logo2.svg" alt="Logo" />
-        </div>
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo2.svg" alt="logo entreprise" />
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
           <li class="dropdown">
@@ -29,15 +29,8 @@
           </li>
           <li><a href="abonnement.html">Abonnement</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">
-              Webinaire
-              <!-- Webinaire<img src="assets/images/fleche.svg" alt="Flèche" /> -->
-            </a>
-            <div class="dropdown-content">
-              <!-- <a href="#">Webinaire 1</a>
-                <a href="#">Webinaire 2</a>
-                <a href="#">Webinaire 3</a> -->
-            </div>
+            <a href="#" class="dropdown-toggle">Webinaire</a>
+            <div class="dropdown-content"></div>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -45,16 +38,22 @@
           <a href="essai.html" class="btn-essai">Essai gratuit</a>
           <a href="connexion.html" class="btn-espace-client">Espace client</a>
         </div>
+        <!-- Menu Hamburger pour petits écrans -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
     <div class="login-wrapper">
       <div class="login-container">
         <h2>Connexion</h2>
         <form>
-          <div class="name-container">
+          <!-- <div class="name-container">
             <input type="text" name="nom" placeholder="Nom" />
             <input type="text" name="prenom" placeholder="Prénom" />
-          </div>
+          </div> -->
           <input
             type="email"
             name="email"
@@ -82,7 +81,7 @@
       <div class="container">
         <h2>Optimisez vos relations client avec <br />Manageti</h2>
         <div class="subscribe">
-          <button><a>RESTEZ INFORMEZ</a></button>
+          <button><a href="essai.html">RESTEZ INFORMEZ</a></button>
           <input type="email" placeholder="Email" />
         </div>
         <div class="columns">
@@ -118,11 +117,13 @@
           <div class="column">
             <h3>CONTACTEZ NOUS</h3>
             <ul>
-              <li><a href="">support@manogeti.com</a></li>
+              <li><a href="">support@manageti.com</a></li>
               <li><a href="#">01 64 72 98 22</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li>
-                <a href="https://www.linkedin.com/company/manageti/"
+                <a
+                  href="https://www.linkedin.com/company/manageti/"
+                  target="_blank"
                   >LinkedIn</a
                 >
               </li>
@@ -131,6 +132,7 @@
               <li>
                 <a
                   href="https://www.instagram.com/manageti_officiel?igsh=M2h4b2hlbnZyaGt1"
+                  target="_blank"
                   >Instagram</a
                 >
               </li>
@@ -147,14 +149,15 @@
             &copy; Copyright 2024 Manageti, Inc. Tout droit réservé
           </div>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/company/manageti/"
+            <a href="https://www.linkedin.com/company/manageti/" target="_blank"
               ><img src="assets/images/linkedin.svg" alt="LinkedIn"
             /></a>
             <!-- <a href="#"
-                ><img src="assets/images/Youtube.svg" alt="YouTube"
-              /></a> -->
+              ><img src="assets/images/Youtube.svg" alt="YouTube"
+            /></a> -->
             <a
               href="https://www.instagram.com/manageti_officiel?igsh=M2h4b2hlbnZyaGt1"
+              target="_blank"
               ><img src="assets/images/instagram.svg" alt="Instagram"
             /></a>
           </div>
@@ -163,6 +166,16 @@
     </footer>
     <!-- Footer -->
 
-    <script src="assets/js/connexion.js"></script>
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/test.js"></script>
   </body>
 </html>
