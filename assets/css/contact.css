@@ -147,7 +147,88 @@ header {
     linear-gradient(88deg, #2c165c -18.58%, #881656 35.08%, #ce3937 90.32%)
   );
 }
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1010;
+}
 
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--Bleu-nuit, #182832);
+  transition: 0.3s;
+}
+
+/* Animation du hamburger en croix */
+.hamburger-menu.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Media Queries pour petits et moyens écrans */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    width: 70%;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    border-radius: 30px;
+    padding-right: 20px;
+  }
+
+  .nav-buttons {
+    display: none; /* Cache les boutons sur petits écrans */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-links {
+    padding: 0;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+  }
+
+  .logo img {
+    margin-left: 10px;
+  }
+}
 /* Media Queries pour la responsiveness */
 @media screen and (max-width: 1024px) {
   .nav-links {
@@ -156,8 +237,27 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-links {
-    margin-left: 60px; /* Réduire la marge à partir de 768px */
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    margin-top: 20px;
+  }
+
+  .nav-buttons .btn-essai,
+  .nav-buttons .btn-espace-client {
+    margin: 10px 10px;
+    width: 60%; /* Ajuste la largeur des boutons dans le menu */
+    text-align: center;
+  }
+
+  .nav-links.active + .nav-buttons {
+    display: flex; /* S'affiche lorsque le menu est actif */
   }
 }
 
@@ -195,7 +295,6 @@ header {
     display: none; /* Cacher les boutons à l'extrême droite */
   }
 }
-
 /*  */
 
 body {
@@ -224,6 +323,7 @@ body {
   );
   border-top-right-radius: 90px;
   border-bottom-right-radius: 90px;
+  z-index: 1000;
 }
 
 .left-section {
@@ -391,6 +491,114 @@ body {
   transform: translateY(-50%);
 }
 
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column; /* Empile les sections sur petits écrans */
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    width: 90%; /* Réduction de la taille des sections */
+    margin: 20px auto; /* Centrer les sections */
+  }
+
+  .left-section {
+    text-align: center; /* Centrer les textes */
+    margin-left: 0;
+  }
+
+  .left-section ul img {
+    margin-left: 0;
+  }
+
+  .right-section img {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .right-section h2 {
+    font-size: 30px;
+    width: auto;
+  }
+
+  .contact-form {
+    margin-left: 0;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .form-group.half-width {
+    flex-direction: column; /* Empile les champs sur petits écrans */
+  }
+
+  .form-group.half-width div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-group.half-width .space-between-fields {
+    display: none; /* Supprime l'espace entre les champs */
+  }
+
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Style responsive pour les téléphones */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .left-section h2,
+  .right-section h2 {
+    font-size: 26px;
+  }
+
+  .left-section h3 {
+    font-size: 20px;
+  }
+
+  .left-section p,
+  .right-section p {
+    font-size: 14px;
+  }
+
+  .right-section {
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 0%;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .map-section img {
+    width: 90%; /* Assure que l'image s'adapte à la largeur de l'écran */
+  }
+}
 /* footer */
 .footer {
   margin-top: -440px;
@@ -562,7 +770,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer {
-    height: 1650px;
+    height: 1250px;
   }
   .footer h2 {
     font-size: 25px;

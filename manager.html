@@ -10,9 +10,9 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">
-          <img src="assets/images/logo2.svg" alt="Logo" />
-        </div>
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo2.svg" alt="logo entreprise" />
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
           <li class="dropdown">
@@ -29,21 +29,20 @@
           </li>
           <li><a href="abonnement.html">Abonnement</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle">
-              Webinaire
-              <!-- Webinaire<img src="assets/images/fleche.svg" alt="Flèche" /> -->
-            </a>
-            <div class="dropdown-content">
-              <!-- <a href="#">Webinaire 1</a>
-                <a href="#">Webinaire 2</a>
-                <a href="#">Webinaire 3</a> -->
-            </div>
+            <a href="#" class="dropdown-toggle">Webinaire</a>
+            <div class="dropdown-content"></div>
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-buttons">
           <a href="essai.html" class="btn-essai">Essai gratuit</a>
           <a href="connexion.html" class="btn-espace-client">Espace client</a>
+        </div>
+        <!-- Menu Hamburger pour petits écrans -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
     </header>
@@ -292,5 +291,6 @@
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/test.js"></script>
+    <script src="assets/js/abonnement.js"></script>
   </body>
 </html>

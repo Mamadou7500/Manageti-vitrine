@@ -594,6 +594,7 @@ body {
   line-height: 82px; /* 154.717% */
   padding-right: 20px;
   color: #fff;
+  max-width: 60%;
 }
 
 .mini-text {
@@ -605,6 +606,7 @@ body {
   line-height: 28px;
   letter-spacing: 0.3px;
   max-width: 600px;
+  /* max-width: 30%; */
 }
 
 .layout-section img {
@@ -636,7 +638,9 @@ body {
     line-height: 40px;
     text-align: center;
     padding-right: 0;
-    margin-bottom: 20px; /* Ajoute un espacement en dessous du titre */
+    margin-bottom: 40px; /* Ajoute un espacement en dessous du titre */
+    max-width: 100%;
+    margin-top: 10%;
   }
 
   .mini-text {
@@ -647,7 +651,7 @@ body {
   }
 
   .layout-section img {
-    width: 70%;
+    width: 50%;
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px; /* Ajoute de l'espace en dessous de l'image */
@@ -665,7 +669,7 @@ body {
   }
 
   .text-container {
-    margin-left: 0;
+    margin-left: 10%;
     padding-right: 0;
     padding-left: 0;
     width: 100%;
@@ -676,7 +680,7 @@ body {
     line-height: 32px;
     text-align: center;
     padding-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
   }
 
   .mini-text {
@@ -687,7 +691,7 @@ body {
   }
 
   .layout-section img {
-    width: 80%;
+    width: 50%;
     height: auto;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -700,14 +704,15 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 5%;
+  margin-left: 10%;
 }
 
 .text-container2 {
   /* /* flex: 1; */
   text-align: left;
   justify-content: justify;
-  padding-left: 30px; /* Ajoute un espacement à gauche du texte */
-  margin-left: 5%;
+  padding-left: 7%;
+  /* margin-left: 5%; */
 }
 
 .text-container2 h2 {
@@ -720,6 +725,7 @@ body {
   letter-spacing: 0.3px;
   padding-right: 20px;
   color: #fff;
+  max-width: 60%;
 }
 
 .mini-text {
@@ -736,7 +742,7 @@ body {
   max-width: 35%;
   margin-top: 20px;
   /* margin-top: 15%; */
-  width: 40%; /* Image prend tout l'espace de la widget */
+  width: 30%; /* Image prend tout l'espace de la widget */
   height: auto;
   border-radius: 22px;
   margin-right: 20px;
@@ -762,6 +768,20 @@ body {
   .content-container2 img {
     margin-top: 0;
     order: 2;
+  }
+}
+@media only screen and (max-width: 576px) {
+  /* Pour les petits écrans (téléphones) */
+  .text-container2 h2 {
+    font-weight: 700;
+    line-height: 52px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  .content-container2 img {
+    width: 100%;
+    order: 3;
   }
 }
 

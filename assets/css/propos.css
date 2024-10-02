@@ -893,7 +893,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer {
-    height: 1650px;
+    height: 1350px;
   }
   .footer h2 {
     font-size: 25px;

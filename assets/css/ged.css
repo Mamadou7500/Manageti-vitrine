@@ -353,6 +353,11 @@ body {
 @media only screen and (max-width: 768px) {
   .centered-container h1 {
     font-size: 30px;
+    line-height: 52px;
+  }
+
+  .centered-container p {
+    padding: 5%;
   }
 }
 
@@ -556,12 +561,12 @@ body {
 }
 
 .mini-text {
-  width: 591px;
-  height: 97px;
+  /* width: 591px;
+  height: 97px; */
   flex-shrink: 0;
   color: var(--texte, #182832);
   text-align: justify;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -573,8 +578,8 @@ body {
   /* max-width: 35%; */
   margin-top: 20px;
   /* margin-top: 15%; */
-  width: 540px;
-  height: 405px;
+  width: 35%;
+  /* height: 405px; */
   flex-shrink: 0;
   /* border-radius: 22px; */
   margin-right: 20px;
@@ -586,9 +591,13 @@ body {
     text-align: justify;
   }
 
-  .mini-text {
-    text-align: justify;
-    margin-right: 15%;
+  .text-container2 .mini-text {
+    /* text-align: justify; */
+    /* margin-right: 15%; */
+    font-size: 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 10%;
   }
 
   .content-container2 {
@@ -598,8 +607,8 @@ body {
 
   .text-container2,
   .content-container2 img {
-    margin-top: 0;
-    order: 2;
+    /* max-width: 80%; */
+    order: 3;
   }
 }
 
@@ -655,7 +664,7 @@ body {
   flex-shrink: 0;
   color: var(--Bleu-nuit, #182832);
   text-align: justify;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -677,9 +686,14 @@ body {
     text-align: center;
   }
 
-  .mini-text {
+  .layout-section .mini-text {
     text-align: justify;
     /* margin-right: 15%; */
+    font-size: 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 10%;
+    margin-left: 20%;
   }
 
   .content-container {
@@ -687,8 +701,8 @@ body {
     text-align: center;
   }
 
-  .text-container,
   .content-container img {
+    width: 60%;
     margin-top: 0;
     order: 2;
   }
@@ -932,7 +946,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer {
-    height: 1650px;
+    height: 1350px;
   }
   .footer h2 {
     font-size: 25px;

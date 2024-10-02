@@ -341,61 +341,13 @@ body {
   .centered-container h1 {
     font-size: 30px;
   }
+
+  .main-content {
+    margin-bottom: 340px;
+  }
 }
 
 /* ... */
-
-.custom-widget-and-text {
-  display: flex;
-  margin-top: 60px; /* Espace entre les deux sections */
-  margin-right: 20px;
-}
-
-.custom-widget-left {
-  margin-left: 15%;
-  flex: 1; /* Prend tout l'espace disponible */
-}
-
-.custom-widget-left img {
-  width: 70%; /* Image prend tout l'espace de la widget */
-  height: auto;
-  border-radius: 22px;
-  margin-right: 20px;
-}
-
-.custom-text-right {
-  flex: 1; /* Prend tout l'espace disponible */
-  padding-left: 0px; /* Ajoute un espacement entre la widget gauche et le texte */
-}
-
-.custom-text-right h2 {
-  font-size: 43px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 60px; /* 154.717% */
-  letter-spacing: 0.3px;
-
-  background: linear-gradient(
-    88deg,
-    #121214 -39.37%,
-    #2c165c -0.45%,
-    #881656 49.04%,
-    #ce3937 74.08%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.custom-text-right p {
-  color: var(--Bleu-nuit, #182832);
-  text-align: justify;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px; /* 175% */
-  letter-spacing: 0.3px;
-}
 
 /* ... */
 .curve {
@@ -542,9 +494,34 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 1024px) {
   .custom-widget-row {
-    flex-direction: column;
+    flex-direction: column; /* Empile les widgets sur petits et moyens écrans */
+    align-items: center; /* Centre les widgets */
+    margin-top: 40%;
+  }
+
+  .custom-widget {
+    width: 80%; /* Les widgets occupent 90% de la largeur de l'écran */
+    margin-bottom: 40%;
+  }
+
+  .custom-widget h3 {
+    font-size: 16px; /* Réduction de la taille du texte */
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Très petits écrans (téléphones) */
+@media (max-width: 768px) {
+  .custom-widget {
+    width: 55%; /* Les widgets prennent presque toute la largeur de l'écran */
+  }
+
+  .custom-widget h3 {
+    font-size: 16px; /* Ajustement de la taille du texte */
+    max-width: 180px;
   }
 }
 
@@ -613,22 +590,29 @@ body {
     font-size: 30px;
     justify-content: center;
     text-align: center;
+    line-height: 52px;
   }
 
   .mini-text {
     text-align: justify;
+    /* align-items: center;
+    justify-content: center; */
     /* margin-right: 15%; */
   }
 
   .content-container {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    margin-top: -140px;
+    margin-left: 10%;
+    margin-bottom: -550px;
   }
 
-  .text-container,
   .content-container img {
     margin-top: 0;
     order: 2;
+    width: 80%;
   }
 }
 
@@ -805,7 +789,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .footer {
-    height: 1650px;
+    height: 1350px;
   }
   .footer h2 {
     font-size: 25px;
